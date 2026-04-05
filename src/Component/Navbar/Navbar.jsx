@@ -10,7 +10,7 @@ export default function Navbar() {
       {/* NAVBAR */}
       <nav className="fixed w-full z-50 bg-white/80 backdrop-blur-md shadow-sm">
         <div className="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
-          <h1 className="text-xl font-bold">JAGANNATH DHAM</h1>
+          <h1 className="text-xl font-bold">DEVINE PURI HOLIDAYS</h1>
 
           {/* Desktop */}
           <ul className="hidden md:flex gap-6 font-medium">

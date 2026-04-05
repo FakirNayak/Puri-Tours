@@ -26,56 +26,6 @@ export default function DestinationSection() {
   return (
     <section className="bg-gray-100 py-10 px-4 md:px-10 overflow-hidden">
       {/* TOP SECTION */}
-      <motion.div
-        initial={{ opacity: 0, y: -40 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6 }}
-        viewport={{ once: true }}
-        className="bg-black text-white rounded-2xl p-6 md:p-10 mb-10 grid md:grid-cols-2 gap-6 items-center"
-      >
-        {/* LEFT */}
-        <div>
-          <h2 className="text-3xl md:text-4xl font-bold">10m+</h2>
-          <p className="text-gray-300 mt-2">Trusted clients / happy clients</p>
-
-          <div className="flex mt-4 -space-x-3">
-            <img
-              className="w-10 h-10 rounded-full border-2 border-white"
-              src="https://randomuser.me/api/portraits/men/1.jpg"
-            />
-            <img
-              className="w-10 h-10 rounded-full border-2 border-white"
-              src="https://randomuser.me/api/portraits/women/2.jpg"
-            />
-            <img
-              className="w-10 h-10 rounded-full border-2 border-white"
-              src="https://randomuser.me/api/portraits/men/3.jpg"
-            />
-            <div className="w-10 h-10 flex items-center justify-center rounded-full bg-orange-500 border-2 border-white">
-              +
-            </div>
-          </div>
-        </div>
-
-        {/* FILTER */}
-        <div className="flex flex-col md:flex-row gap-3">
-          <select className="p-3 rounded-lg bg-gray-800">
-            <option>Where To Go</option>
-          </select>
-
-          <select className="p-3 rounded-lg bg-gray-800">
-            <option>Where To Go</option>
-          </select>
-
-          <select className="p-3 rounded-lg bg-gray-800">
-            <option>Travel Type</option>
-          </select>
-
-          <button className="bg-orange-500 px-6 py-3 rounded-lg hover:scale-105 transition">
-            Find Tours
-          </button>
-        </div>
-      </motion.div>
 
       {/* GRID */}
       <motion.div
@@ -106,10 +56,7 @@ export default function DestinationSection() {
             className="w-full h-full object-cover group-hover:scale-110 transition duration-700"
           />
           <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition"></div>
-          <div className="absolute bottom-4 left-4 text-white">
-            <h3 className="font-bold">Climbing Waterfalls</h3>
-            <p className="text-sm">Bol, Croatia</p>
-          </div>
+          <div className="absolute bottom-4 left-4 text-white"></div>
         </motion.div>
 
         {/* CARD 2 */}
@@ -122,10 +69,7 @@ export default function DestinationSection() {
             className="w-full h-full object-cover group-hover:scale-110 transition duration-700"
           />
           <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition"></div>
-          <div className="absolute bottom-4 left-4 text-white">
-            <h3 className="font-bold">River Rafting</h3>
-            <p className="text-sm">Alps</p>
-          </div>
+          <div className="absolute bottom-4 left-4 text-white"></div>
         </motion.div>
 
         {/* BIG CENTER */}
@@ -151,10 +95,7 @@ export default function DestinationSection() {
             src="https://images.unsplash.com/photo-1549692520-acc6669e2f0c"
             className="w-full h-full object-cover group-hover:scale-110 transition duration-700"
           />
-          <div className="absolute bottom-4 left-4 text-white">
-            <h3 className="font-bold">Temple View</h3>
-            <p className="text-sm">Thailand</p>
-          </div>
+          <div className="absolute bottom-4 left-4 text-white"></div>
         </motion.div>
 
         {/* RIGHT BOTTOM */}
@@ -166,10 +107,7 @@ export default function DestinationSection() {
             src="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429"
             className="w-full h-full object-cover group-hover:scale-110 transition duration-700"
           />
-          <div className="absolute bottom-4 left-4 text-white">
-            <h3 className="font-bold">Mountain Escape</h3>
-            <p className="text-sm">Nepal</p>
-          </div>
+          <div className="absolute bottom-4 left-4 text-white"></div>
         </motion.div>
       </motion.div>
     </section>

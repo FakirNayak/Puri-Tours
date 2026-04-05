@@ -41,29 +41,91 @@ export default function Hero() {
       <div className="relative z-10 text-white max-w-2xl px-6 md:px-16">
         {/* TITLE */}
         <motion.h1
+          key={index}
           initial="hidden"
           animate="show"
-          variants={{
-            hidden: {},
-            show: { transition: { staggerChildren: 0.05 } },
-          }}
-          className="text-4xl md:text-6xl font-bold leading-tight"
+          exit="exit"
+          className="text-2xl md:text-4xl font-bold leading-tight"
         >
-          {"Turning your travel dreams into reality"
-            .split("")
-            .map((char, i) => (
+          {/* 🔥 FIRST LINE (CINEMATIC) */}
+          <motion.div
+            variants={{
+              hidden: {
+                opacity: 0,
+                y: 80,
+                scale: 0.95,
+                filter: "blur(10px)",
+              },
+              show: {
+                opacity: 1,
+                y: 0,
+                scale: 1,
+                filter: "blur(0px)",
+                transition: {
+                  duration: 0.8,
+                  ease: "easeOut",
+                },
+              },
+              exit: {
+                opacity: 0,
+                y: -60,
+                scale: 0.95,
+                filter: "blur(8px)",
+                transition: { duration: 0.5 },
+              },
+            }}
+          >
+            Turning your <span className="text-orange-400">destiny</span>
+          </motion.div>
+
+          {/* 🔥 SECOND LINE (LETTER ANIMATION) */}
+          <motion.div
+            className="mt-1"
+            variants={{
+              hidden: {},
+              show: {
+                transition: {
+                  staggerChildren: 0.06,
+                  delayChildren: 0.3,
+                },
+              },
+              exit: {
+                transition: {
+                  staggerChildren: 0.03,
+                  staggerDirection: -1,
+                },
+              },
+            }}
+          >
+            {"dreams into reality".split("").map((char, i) => (
               <motion.span
                 key={i}
                 variants={{
-                  hidden: { opacity: 0, y: 40 },
-                  show: { opacity: 1, y: 0 },
+                  hidden: {
+                    opacity: 0,
+                    y: 40,
+                    filter: "blur(6px)",
+                  },
+                  show: {
+                    opacity: 1,
+                    y: 0,
+                    filter: "blur(0px)",
+                    transition: {
+                      duration: 0.3,
+                    },
+                  },
+                  exit: {
+                    opacity: 0,
+                    y: -30,
+                    transition: { duration: 0.2 },
+                  },
                 }}
-                transition={{ duration: 0.3 }}
                 className="inline-block"
               >
-                {char}
+                {char === " " ? "\u00A0" : char}
               </motion.span>
             ))}
+          </motion.div>
         </motion.h1>
 
         {/* SUBTEXT */}
@@ -73,7 +135,7 @@ export default function Hero() {
           transition={{ delay: 1 }}
           className="mt-4 text-lg text-gray-200"
         >
-          Explore the world with us and create unforgettable memories.
+          Explore the Puri Konark Temple.
         </motion.p>
 
         {/* BUTTON */}
