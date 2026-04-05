@@ -138,7 +138,6 @@ export default function Hero() {
           Explore the Puri Konark Temple.
         </motion.p>
 
-        {/* BUTTON */}
         <motion.button
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
@@ -149,7 +148,6 @@ export default function Hero() {
           Explore Now
         </motion.button>
 
-        {/* GLOW TEXT */}
         <motion.div
           animate={{ opacity: [0.4, 1, 0.4] }}
           transition={{ duration: 2, repeat: Infinity }}
